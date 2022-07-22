@@ -8,7 +8,7 @@ Have webscrapper in python.
 
 TODO
 
-- [ ] `GET` /api/v1/jobs
-- [ ] `POST` /api/v1/jobs
-- [ ] `GET` /api/v1/gif
-- [ ] `POST` /api/v1/gif
+- [ ] `GET` /api/jobs
+- [ ] `POST` /api/jobs
+- [ ] `GET` /api/gif
+- [ ] `POST` /api/gif
