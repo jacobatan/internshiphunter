@@ -1,0 +1,42 @@
+
+.jobs-found{
+    color: #4b4b4b;
+    font-family: var(--p-font);
+    font-weight: 100;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+.loading{
+    margin: auto;
+    align-self: center;
+}
+
+.jobs{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.show-jobs {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    animation: appear 1s ease-in ;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}

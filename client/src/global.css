@@ -2,8 +2,13 @@
 :root {
   --p-color: #0000ff;
   --s-color: #00ff00;
+  --loading-color: #404040;
+
+  --p-font: "Inter", sans-serif;
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: var(--p-font);
 }
