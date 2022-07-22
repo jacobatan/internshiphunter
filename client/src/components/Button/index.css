@@ -47,4 +47,10 @@
 .cta:hover .hover-underline-animation:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+    
 }
+
+.cta:hover{
+    cursor: pointer;
+}
+
