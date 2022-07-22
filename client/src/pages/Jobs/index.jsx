@@ -24,7 +24,6 @@ const Jobs = () => {
   
 
   return (
-<<<<<<< Updated upstream
     <div className="jobs">
         {/* <Button text={"hello!"} handleChange={handleChange()}/> */}  
       <h1 className="jobs-found">
@@ -59,10 +58,6 @@ const Jobs = () => {
       
       
       
-=======
-    <div>
-        <Button text={"hello!"} onClick={onClick()}/>
->>>>>>> Stashed changes
     </div>
   )
 };
