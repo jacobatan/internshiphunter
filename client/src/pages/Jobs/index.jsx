@@ -14,8 +14,8 @@ const Jobs = () => {
   const [loading, setLoading] = useState(true);
   const [modal, showModal] = useState(false);
   const [showEmotes, setShowEmotes] = useState(false);
-  const [points, setPoints] = useState(999);
-  const userName = "Dhruv Bhai";
+  const [points, setPoints] = useState(1000);
+  const userName = "Dhruv";
 
   const scores = [90, 80, 70, 60, 50];
   const names = ["Jacob", "Aditya", "Niraj", "Ayaan", "DK"];
@@ -58,14 +58,14 @@ const Jobs = () => {
   const maxCardsPerPage = 20;
 
   useEffect(() => {
-    const bitch = async () => {
+    const temp = async () => {
       const allJobs = await getAllJobs();
       setAllJobsStatic(allJobs);
     };
     const loader = setTimeout(() => {
       setLoading(false);
     }, 700);
-    bitch();
+    temp();
     return () => clearTimeout(loader);
   }, []);
 
@@ -82,16 +82,20 @@ const Jobs = () => {
   const handleSubmitClick = () => {
     console.log(selectedLocation.value);
     console.log(selectedOption);
-    const bitch = async () => {
+    const temp = async () => {
       const allJobs = await getJob(selectedLocation.value, selectedOption);
       setAllJobsStatic(allJobs);
     };
     const loader = setTimeout(() => {
       setLoading(false);
     }, 700);
-    bitch();
+    temp();
     return () => clearTimeout(loader);
   };
+
+  function emoteClick() {
+    points < 0 ? setPoints(points) : setPoints(points - 50)
+  }
 
   return (
     <div className="jobs">
@@ -165,7 +169,7 @@ const Jobs = () => {
                   <span>
                     <Button
                       text="50PP"
-                      onClick={() => setPoints(points - 50)}
+                      onClick={emoteClick}
                     />
                   </span>
                   <span>
@@ -176,7 +180,9 @@ const Jobs = () => {
                     />
                   </span>
                   <span>
-                    <Button text="50PP" />
+                    <Button text="50PP"
+                            onClick={emoteClick}
+                    />
                   </span>
                 </div>
                 <div className="modal-leaderboard-section">
@@ -188,7 +194,9 @@ const Jobs = () => {
                     />
                   </span>
                   <span>
-                    <Button text="50PP" />
+                    <Button text="50PP"
+                            onClick={emoteClick}
+                    />
                   </span>
                   <span>
                     <img
@@ -198,7 +206,9 @@ const Jobs = () => {
                     />
                   </span>
                   <span>
-                    <Button text="50PP" />
+                    <Button text="50PP"
+                            onClick={emoteClick}
+                    />
                   </span>
                 </div>
                 <div className="modal-leaderboard-section">
@@ -210,7 +220,9 @@ const Jobs = () => {
                     />
                   </span>
                   <span>
-                    <Button text="50PP" />
+                    <Button text="50PP"
+                            onClick={emoteClick}
+                    />
                   </span>
                   <span>
                     <img
@@ -220,7 +232,9 @@ const Jobs = () => {
                     />
                   </span>
                   <span>
-                    <Button text="50PP" />
+                    <Button text="50PP"
+                            onClick={emoteClick}
+                    />
                   </span>
                 </div>
               </div>
