@@ -25,11 +25,11 @@
     transform: scale(0.9);
 }
 
-.hover-underline-animation {
+/* .hover-underline-animation {
     position: relative;
     color: black;
     padding-bottom: 20px;
-}
+} */
 
 .hover-underline-animation:after {
     content: "";
@@ -47,4 +47,10 @@
 .cta:hover .hover-underline-animation:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+    
 }
+
+.cta:hover{
+    cursor: pointer;
+}
+
