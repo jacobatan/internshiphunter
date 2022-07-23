@@ -12,7 +12,7 @@ const getAllJobs = async (req, res) => {
 
   // if (type) {
   //   queryObject["jobTitle"] = { $regex: type, $options: "i" };
-  // }
+  //}
 
   if (field) {
     queryObject["field"] = { $regex: field, $options: "i" };
