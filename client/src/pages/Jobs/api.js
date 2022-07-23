@@ -12,7 +12,9 @@ export async function getAllJobs() {
 }
 
 export async function getJob(location, field) {
-  console.log(location, field);
+  if (location === "All") {
+    location = "";
+  }
   const URL = `https://internship-hunter.herokuapp.com/api/jobs?field=${field}&location=${location}`;
   try {
     const response = await Axios.get(URL);
