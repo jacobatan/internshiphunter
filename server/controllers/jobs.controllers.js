@@ -7,7 +7,7 @@ const getAllJobsStatic = async (req, res) => {
 };
 
 const getAllJobs = async (req, res) => {
-  const { field } = req.query;
+  const { field, location } = req.query;
   const queryObject = {};
 
   // if (type) {
@@ -16,6 +16,10 @@ const getAllJobs = async (req, res) => {
 
   if (field) {
     queryObject["field"] = { $regex: field, $options: "i" };
+  }
+
+  if (location) {
+    queryObject["location"] = { $regex: location, $options: "i" };
   }
 
   const allJobs = await Job.find(queryObject);

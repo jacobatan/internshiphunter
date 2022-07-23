@@ -20,7 +20,7 @@ const JobSchema = new mongoose.Schema({
   },
   location: {
     type: String,
-    required: [true, "Location is required"],
+    default: "Auckland",
   },
 });
 
