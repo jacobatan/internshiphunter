@@ -5,15 +5,17 @@ import JobCard from '../../components/JobCard'
 import { useEffect } from "react";
 import { useState } from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faU, faUser } from '@fortawesome/free-solid-svg-icons'
+import {faUser } from '@fortawesome/free-solid-svg-icons'
 
 const Jobs = () => {
 
+  const [loading, setLoading] = useState(true);
+  const [modal, showModal] = useState(false);
+
   function onClick() {
-    console.log('hello');
+    showModal(!modal);
   }
 
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loader = setTimeout(() => {
@@ -31,18 +33,20 @@ const Jobs = () => {
         <h1 className="jobs-found">
             Here are the jobs we found for you...
         </h1>
-        <button className="profile-btn">
+        <button className="profile-btn" onClick={onClick}>
           <FontAwesomeIcon icon={faUser} size="2x"/>
         </button>
         
       </div>
 
-      <div id="myModal" className="modal">
-        <div className="modal-content">
-        <span className="close">&times;</span>
-        <p>Some text in the Modal..</p>
+      { modal && 
+        <div id="myModal" className="modal">
+          <div className="modal-content">
+          <span onClick={onClick} className="close">&times;</span>
+          <p>hi dhruv bhai</p>
+          </div>
         </div>
-      </div>
+      }
 
       {
         loading ? 
