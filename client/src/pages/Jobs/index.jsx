@@ -39,6 +39,7 @@ const Jobs = () => {
         
       </div>
 
+            {/* DHRUVVVV BHAIIIII */}
       { modal && 
         <div id="myModal" className="modal">
           <div className="modal-content">
@@ -47,6 +48,7 @@ const Jobs = () => {
           </div>
         </div>
       }
+            {/* DHRUVVVV BHAIIIII */}
 
       {
         loading ? 
