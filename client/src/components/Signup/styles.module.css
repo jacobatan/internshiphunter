@@ -1,0 +1,95 @@
+.signup_container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f3f2ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup_form_container {
+  width: 900px;
+  height: 500px;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px -2px #efe2d8, 0 3px 4px 0 #efe2d8, 0 1px 8px 0 #efe2d8;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: black 0.2rem solid;
+}
+
+.left h1 {
+  margin-top: 0;
+  color: #222426;
+  font-size: 35px;
+  align-self: center;
+}
+
+.right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_container h1 {
+  font-size: 40px;
+  margin-top: 0;
+  color: black;
+}
+
+.input {
+  outline: none;
+  border: none;
+  width: 370px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: black;
+  margin: 5px 0;
+  font-size: 14px;
+  color: white;
+}
+
+.error_msg {
+  width: 370px;
+  padding: 15px;
+  margin: 5px 0;
+  font-size: 14px;
+  background-color: #f34646;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.black_btn {
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  background-color: black;
+  color: white;
+  margin: 10px;
+  border-radius: 20px;
+  width: 180px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
