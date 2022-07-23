@@ -14,11 +14,11 @@ const Jobs = () => {
   const [loading, setLoading] = useState(true);
   const [modal, showModal] = useState(false);
   const [showEmotes, setShowEmotes] = useState(false);
-  const [points, setPoints] = useState(1000);
+  const [points, setPoints] = useState(100);
   const userName = "Dhruv";
 
   const scores = [90, 80, 70, 60, 50];
-  const names = ["Jacob", "Aditya", "Niraj", "Ayaan", "DK"];
+  const names = ["Jacob", "Aditya", "Niraj", "Ayaan", "Mukesh"];
 
   const showEmoteBtns = names.map((name, i) => {
     return (
@@ -123,7 +123,7 @@ const Jobs = () => {
               </div>
             </div>
             <div className="modal-leaderboard">
-              <h2 className="leaderboard">Leaderboard</h2>
+              <h2 className="leaderboard">Your Friends</h2>
               <div className="modal-leaderboard-box">
                 <div className="modal-leaderboard-section">
                   <span>
