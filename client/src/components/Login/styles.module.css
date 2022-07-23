@@ -1,7 +1,7 @@
 .login_container {
     width: 100%;
     min-height: 100vh;
-    background-color: #222426;
+    background-color: #f3f2ee;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,8 +12,8 @@
     height: 500px;
     display: flex;
     border-radius: 10px;
-    box-shadow: 0 3px 3px -2px rgba(55, 255, 139, 0.7),
-    0 3px 4px 0 #222426, 0 1px 8px 0 rgba(55, 255, 139, 0.7);
+    box-shadow: 0 3px 3px -2px #efe2d8,
+    0 3px 4px 0 #efe2d8, 0 1px 8px 0 #efe2d8;
 }
 
 .left {
@@ -22,7 +22,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(55, 255, 139, 0.7);
+    background-color: #ffffff;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -45,7 +45,7 @@
     width: 370px;
     padding: 15px;
     border-radius: 10px;
-    background-color: #edf5f3;
+    background-color: black;
     margin: 5px 0;
     font-size: 14px;
 }
@@ -67,39 +67,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #222426;
+    background-color: white;
+    border-left: black 0.2rem solid;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
 .right h1 {
     margin-top: 0;
-    color: white;
+    color: black;
     font-size: 35px;
     text-align: center;
 }
 
-.white_btn,
-.green_btn {
+.black_btn {
     border: none;
     outline: none;
     padding: 12px 0;
-    background-color: white;
+    background-color: black;
+    color: white;
+    margin: 10px;
     border-radius: 20px;
     width: 180px;
     font-weight: bold;
     font-size: 14px;
     cursor: pointer;
-}
-
-.green_btn {
-    background-color: white;
-    color: #222426;
-    margin: 10px;
-}
-
-.white_btn {
-    background-color: rgba(55, 255, 139, 0.7);
-    color: white;
-    margin: 10px;
 }

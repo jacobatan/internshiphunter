@@ -41,7 +41,7 @@ const Index = () => {
 				<div className={styles.left}>
 					<h1>Internship Hunter</h1>
 					<Link to="/login">
-						<button type="button" className={styles.white_btn}>
+						<button type="button" className={styles.black_btn}>
 							Sing in
 						</button>
 					</Link>
@@ -86,7 +86,7 @@ const Index = () => {
 							className={styles.input}
 						/>
 						{error && <div className={styles.error_msg}>{error}</div>}
-						<button type="submit" className={styles.green_btn}>
+						<button type="submit" className={styles.black_btn}>
 							Sing Up
 						</button>
 					</form>
