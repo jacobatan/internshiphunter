@@ -1,5 +1,7 @@
 // node/express
 
+const Job = require("./models/Job.models");
+
 require("dotenv").config();
 require("express-async-errors");
 
@@ -21,10 +23,32 @@ app.use("/api", routers);
 
 const port = process.env.PORT || 3000;
 
+// ayaan moment
+const axios = require("axios");
+const ayaan = require("./ayaan.json");
+const hackyPost = async (ayaanPayload) => {
+  try {
+    const res = await axios.post(
+      "http://localhost:3000/api/jobs",
+      ayaanPayload
+    );
+  } catch (error) {
+    console.log(error);
+  }
+};
+const ayaanFunction = async () => {
+  await Job.deleteMany();
+  ayaan.map((smallAyaan) => {
+    hackyPost(smallAyaan);
+  });
+};
+// ayaan moment ends
+
 const start = async () => {
   try {
     await connectDB(process.env.MONGO_URI);
     app.listen(port, () => console.log(`server is listening on port ${port}`));
+    ayaanFunction();
   } catch (error) {
     console.log(error);
   }

@@ -1,8 +1,24 @@
 const Job = require("../models/Job.models");
 const { StatusCodes } = require("http-status-codes");
 
-const getAllJobs = async (req, res) => {
+const getAllJobsStatic = async (req, res) => {
   const allJobs = await Job.find({});
+  res.status(StatusCodes.OK).send(allJobs);
+};
+
+const getAllJobs = async (req, res) => {
+  const { field } = req.query;
+  const queryObject = {};
+
+  // if (type) {
+  //   queryObject["jobTitle"] = { $regex: type, $options: "i" };
+  // }
+
+  if (field) {
+    queryObject["field"] = { $regex: field, $options: "i" };
+  }
+
+  const allJobs = await Job.find(queryObject);
   res.status(StatusCodes.OK).send(allJobs);
 };
 
@@ -11,4 +27,4 @@ const createJobs = async (req, res) => {
   res.status(StatusCodes.CREATED).send(job);
 };
 
-module.exports = { getAllJobs, createJobs };
+module.exports = { getAllJobs, createJobs, getAllJobsStatic };
