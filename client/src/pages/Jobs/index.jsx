@@ -12,9 +12,36 @@ const Jobs = () => {
     const [loading, setLoading] = useState(true);
     const [modal, showModal] = useState(false);
     const [showEmotes, setShowEmotes] = useState(false);
+    const userName = "Dhruv Bhai";
+    const userScore = 999;
+
+    const scores = [90, 80, 70, 60, 50];
+    const names = ["Jacob", "Aditya", "Niraj", "Ayaan", "DK"];
+
+    const showEmoteBtns = names.map((name, i) => {
+      return (
+        <span key={i}><Button text="emote" id={i} onClick={i=>emotesOnClick(i)}></Button></span>
+      )
+    })
+
+    const showNames = names.map((name, i) => {
+      return (
+          <span key={i}><p className="name" >{name}</p></span>
+      )
+    })
+
+    const showScores = scores.map((score, i)=> {
+      return (
+        <p key={i} className="score"> {score} </p>
+      )
+    })
 
     function onClick() {
         showModal(!modal);
+    }
+
+    const emotesOnClick = (event) => {
+      console.log(event.currentTarget.id);
     }
 
 
@@ -50,36 +77,24 @@ const Jobs = () => {
                                 <img src={salman} className="profile-img" alt='salman khan'/>
                             </div>
                             <div className="modal-info-text">
-                                <h1>hi dhruv bhai</h1>
-                                <h4>Your Score : 999999</h4>
+                                <h1 className="username">Hello {userName}</h1>
+                                <p className="points">Your Score : {userScore}</p>
                             </div>
                         </div>
                         <div className="modal-leaderboard">
-                            <h2>Leaderboard</h2>
+                            <h2 className="leaderboard">Leaderboard</h2>
                             <div className="modal-leaderboard-box">
                                 <div className="modal-leaderboard-section">
-                                    <span><h4>Name</h4></span>
-                                    <span>Jacob</span>
-                                    <span>Aditya</span>
-                                    <span>Niraj</span>
-                                    <span>Ayaan</span>
-                                    <span>DK</span>
+                                    <span><h4 className="heading" >Name</h4></span>
+                                    {showNames}
                                 </div>
                                 <div className="modal-leaderboard-section">
-                                    <span><h4>Emotes</h4></span>
-                                    <span><Button text="emote"></Button></span>
-                                    <span><button>emote</button></span>
-                                    <span><button>emote</button></span>
-                                    <span><button>emote</button></span>
-                                    <span><button>emote</button></span>
+                                    <span><h4 className="heading">Emotes</h4></span>
+                                    {showEmoteBtns}
                                 </div>
                                 <div className="modal-leaderboard-section">
-                                    <span><h4>Score</h4></span>
-                                    <span>90</span>
-                                    <span>80</span>
-                                    <span>70</span>
-                                    <span>60</span>
-                                    <span>50</span>
+                                    <span><h4 className="heading">Score</h4></span>
+                                    {showScores}
                                 </div>
                             </div>
                         </div>

@@ -1,14 +1,27 @@
 
+
 .jobs-found {
-    color: white;
+    color: #191919;
     font-family: var(--p-font);
     font-weight: 100;
-    text-transform: capitalize;
+    text-transform: lowercase;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.75rem;
+    letter-spacing: 2px;
     margin-top: 1em;
-    margin-bottom: 1em;
     margin-right: 2em;
+    padding-bottom: 0.5em;
+    position: relative;
+}
+
+.jobs-found::after{
+    content: "";
+    width: 50%;
+    height: 1px;
+    position: absolute;
+    border-bottom: 1px solid #191919;
+    bottom: 0;
+    left: 0;
 }
 
 
@@ -21,15 +34,13 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color:#F3F2EF;
 }
-
 
 .show-jobs {
     padding: 2em 0;
     display: flex;
     max-width: 1000px;
-    border-top: 1px solid rgb(134, 134, 134);
     margin: 3em auto;
     flex-flow: wrap;
     justify-content: space-evenly;
@@ -43,13 +54,12 @@
     max-width: 1200px;
     justify-content: space-evenly;
     margin: 0 auto;
-    color: #fefefe;
+    color: #191919;
 }
 
 .profile-btn {
     background: none;
     border: none;
-    background-color: white;
 }
 
 .profile-btn:hover {
@@ -65,7 +75,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 }
@@ -75,32 +85,85 @@
     margin: 15% auto;
     padding: 1em;
     border: 1px solid #888;
-    width: 40%;
+    max-width: 30%;
     border-radius: 1rem;
 }
 
 .modal-info {
+    max-width: 80%;
+    margin: 0 auto;
     display: flex;
 }
 
 .modal-info-text {
-    margin-left: 4rem;
+    margin-left: 4em;
 }
 
 .modal-leaderboard {
-    border: black 0.2rem solid;
     text-align: center;
 }
 
 .modal-leaderboard-box {
     display: flex;
-    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    /* border: 2px solid red; */
 }
 
 .modal-leaderboard-section{
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    padding-left: 2em;
+}
+
+.leaderboard{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+.leaderboard, .name, .heading {
+    color: #191919;
+}
+
+.username{
+    font-family: var(--p-font);
+    font-weight: 100;
+    font-size: 1.75rem;
+    margin: 1em 0;
+}
+
+.points{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.name{
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.heading{
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.score {
+    letter-spacing: 2px;
+    font-size: 0.9rem;
 }
 
 .modal-leaderboard-section span{
