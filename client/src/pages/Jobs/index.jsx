@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import "./index.css";
 import Spinner from "../../components/Spinner";
 import JobCard from "../../components/JobCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faUser} from "@fortawesome/free-solid-svg-icons";
 import salman from "../../assests/salman.jpg";
 import Button from "../../components/Button";
-import { getAllJobs, getJob } from "./api.js";
+import {getAllJobs, getJob} from "./api.js";
 import Select from "react-select";
 import Input from "./components/Input";
 
@@ -19,10 +19,15 @@ const Jobs = () => {
 
   const scores = [90, 80, 70, 60, 50];
   const names = ["Jacob", "Aditya", "Niraj", "Ayaan", "Mukesh"];
+  const gif = [
+    "https://c.tenor.com/bmFPh10gQtQAAAAC/salman-khan.gif", "https://c.tenor.com/WxxgkUaLvCsAAAAC/ghanta-salman.gif",
+    "https://c.tenor.com/w2mCAR7kgUsAAAAC/clash-royale-emotes.gif", "https://c.tenor.com/YvwNrCfhvOIAAAAC/susu-varudhu-raghava-lawrence.gif",
+    "https://c.tenor.com/a24Gl3uJus8AAAAM/salman-khan-angry.gif", "https://c.tenor.com/XvJfOBkN33MAAAAM/modi-ji-tapa-tapa.gif"
+  ]
 
   const showEmoteBtns = names.map((name, i) => {
     return (
-      <span key={i}>
+        <span key={i}>
         <Button text="emote" id={i} onClick={(i) => emotesOnClick(i)}></Button>
       </span>
     );
@@ -30,7 +35,7 @@ const Jobs = () => {
 
   const showNames = names.map((name, i) => {
     return (
-      <span key={i}>
+        <span key={i}>
         <p className="name">{name}</p>
       </span>
     );
@@ -38,10 +43,10 @@ const Jobs = () => {
 
   const showScores = scores.map((score, i) => {
     return (
-      <p key={i} className="score">
-        {" "}
-        {score}{" "}
-      </p>
+        <p key={i} className="score">
+          {" "}
+          {score}{" "}
+        </p>
     );
   });
 
@@ -70,10 +75,10 @@ const Jobs = () => {
   }, []);
 
   const options = [
-    { value: "all", label: "All" },
-    { value: "auckland", label: "Auckland" },
-    { value: "sydney", label: "Sydney" },
-    { value: "hongkong", label: "Hong Kong" },
+    {value: "all", label: "All"},
+    {value: "auckland", label: "Auckland"},
+    {value: "sydney", label: "Sydney"},
+    {value: "hongkong", label: "Hong Kong"},
   ];
 
   const [selectedLocation, setSelectedLocation] = useState(null);
@@ -99,189 +104,189 @@ const Jobs = () => {
   }
 
   return (
-    <div className="jobs">
-      {/* <Button text={"hello!"} handleChange={handleChange()}/> */}
-      <div className="jobs-nav">
-        <h1 className="jobs-found">Here are the jobs we found for you...</h1>
-        <button className="profile-btn" onClick={onClick}>
-          <FontAwesomeIcon icon={faUser} size="2x" />
-        </button>
-      </div>
-      {/* DHRUVVVV BHAIIIII */}
-      {modal && (
-        <div id="myModal" className="modal">
-          <div className="modal-content">
+      <div className="jobs">
+        {/* <Button text={"hello!"} handleChange={handleChange()}/> */}
+        <div className="jobs-nav">
+          <h1 className="jobs-found">Here are the jobs we found for you...</h1>
+          <button className="profile-btn" onClick={onClick}>
+            <FontAwesomeIcon icon={faUser} size="2x"/>
+          </button>
+        </div>
+        {/* DHRUVVVV BHAIIIII */}
+        {modal && (
+            <div id="myModal" className="modal">
+              <div className="modal-content">
             <span onClick={onClick} className="close">
               &times;
             </span>
-            <div className="modal-info">
-              <div>
-                <img src={salman} className="profile-img" alt="salman khan" />
-              </div>
-              <div className="modal-info-text">
-                <h1 className="username">Hello {userName}</h1>
-                <p className="points">Your Score : {points}</p>
-              </div>
-            </div>
-            <div className="modal-leaderboard">
-              <h2 className="leaderboard">Your Friends</h2>
-              <div className="modal-leaderboard-box">
-                <div className="modal-leaderboard-section">
+                <div className="modal-info">
+                  <div>
+                    <img src={salman} className="profile-img" alt="salman khan"/>
+                  </div>
+                  <div className="modal-info-text">
+                    <h1 className="username">Hello {userName}</h1>
+                    <p className="points">Your Score : {points}</p>
+                  </div>
+                </div>
+                <div className="modal-leaderboard">
+                  <h2 className="leaderboard">Your Friends</h2>
+                  <div className="modal-leaderboard-box">
+                    <div className="modal-leaderboard-section">
                   <span>
                     <h4 className="heading">Name</h4>
                   </span>
-                  {showNames}
-                </div>
-                <div className="modal-leaderboard-section">
+                      {showNames}
+                    </div>
+                    <div className="modal-leaderboard-section">
                   <span>
                     <h4 className="heading">Emotes</h4>
                   </span>
-                  {showEmoteBtns}
-                </div>
-                <div className="modal-leaderboard-section">
+                      {showEmoteBtns}
+                    </div>
+                    <div className="modal-leaderboard-section">
                   <span>
                     <h4 className="heading">Score</h4>
                   </span>
-                  {showScores}
+                      {showScores}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+        )}
 
-      {showEmotes && (
-        <div id="myModal" className="modal">
-          <div className="modal-content">
+        {showEmotes && (
+            <div id="myModal" className="modal">
+              <div className="modal-content">
             <span onClick={emotesOnClick} className="close">
               &times;
             </span>
-            <div className="modal-leaderboard">
-              <h1 className="points-score">Points : {points}</h1>
-              <div className="modal-leaderboard-box">
-                <div className="modal-leaderboard-section">
+                <div className="modal-leaderboard">
+                  <h1 className="points-score">Points : {points}</h1>
+                  <div className="modal-leaderboard-box">
+                    <div className="modal-leaderboard-section">
                   <span>
                     <img
-                      src="https://c.tenor.com/bmFPh10gQtQAAAAC/salman-khan.gif"
-                      className="profile-img"
-                      alt="salman khan"
+                        src={gif[0]}
+                        className="profile-img"
+                        alt="salman khan"
                     />
                   </span>
-                  <span>
+                      <span>
                     <Button
-                      text="50PP"
-                      onClick={emoteClick}
+                        text="50PP"
+                        onClick={emoteClick}
                     />
                   </span>
-                  <span>
+                      <span>
                     <img
-                      src="https://c.tenor.com/WxxgkUaLvCsAAAAC/ghanta-salman.gif"
-                      className="profile-img"
-                      alt="salman khan"
+                        src={gif[1]}
+                        className="profile-img"
+                        alt="salman khan"
                     />
                   </span>
-                  <span>
+                      <span>
                     <Button text="50PP"
                             onClick={emoteClick}
                     />
                   </span>
-                </div>
-                <div className="modal-leaderboard-section">
+                    </div>
+                    <div className="modal-leaderboard-section">
                   <span>
                     <img
-                      src="https://c.tenor.com/w2mCAR7kgUsAAAAC/clash-royale-emotes.gif"
-                      className="profile-img"
-                      alt="salman khan"
+                        src={gif[2]}
+                        className="profile-img"
+                        alt="salman khan"
                     />
                   </span>
-                  <span>
+                      <span>
                     <Button text="50PP"
                             onClick={emoteClick}
                     />
                   </span>
-                  <span>
+                      <span>
                     <img
-                      src="https://c.tenor.com/YvwNrCfhvOIAAAAC/susu-varudhu-raghava-lawrence.gif"
-                      className="profile-img"
-                      alt="salman khan"
+                        src={gif[3]}
+                        className="profile-img"
+                        alt="salman khan"
                     />
                   </span>
-                  <span>
+                      <span>
                     <Button text="50PP"
                             onClick={emoteClick}
                     />
                   </span>
-                </div>
-                <div className="modal-leaderboard-section">
+                    </div>
+                    <div className="modal-leaderboard-section">
                   <span>
                     <img
-                      src="https://c.tenor.com/6GjVJS0Fn5cAAAAd/hila-lund.gif"
-                      className="profile-img"
-                      alt="salman khan"
+                        src={gif[4]}
+                        className="profile-img"
+                        alt="salman khan"
                     />
                   </span>
-                  <span>
+                      <span>
                     <Button text="50PP"
                             onClick={emoteClick}
                     />
                   </span>
-                  <span>
+                      <span>
                     <img
-                      src="https://c.tenor.com/XvJfOBkN33MAAAAM/modi-ji-tapa-tapa.gif"
-                      className="profile-img"
-                      alt="salman khan"
+                        src={gif[5]}
+                        className="profile-img"
+                        alt="salman khan"
                     />
                   </span>
-                  <span>
+                      <span>
                     <Button text="50PP"
                             onClick={emoteClick}
                     />
                   </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+        )}
+
+        {/* DHRUVVVV BHAIIIII */}
+        <div className="dropdown__select--wrapper">
+          <div className="dropdown__select">
+            <Select
+                placeholder={"Pick a location"}
+                defaultValue={selectedLocation}
+                onChange={setSelectedLocation}
+                options={options}
+            />
+            <Input
+                value={selectedOption}
+                onChange={(e) => setSelectedOption(e.target.value)}
+            />
+            <Button onClick={handleSubmitClick} text={"submit"}/>
           </div>
         </div>
-      )}
-
-      {/* DHRUVVVV BHAIIIII */}
-      <div className="dropdown__select--wrapper">
-        <div className="dropdown__select">
-          <Select
-            placeholder={"Pick a location"}
-            defaultValue={selectedLocation}
-            onChange={setSelectedLocation}
-            options={options}
-          />
-          <Input
-            value={selectedOption}
-            onChange={(e) => setSelectedOption(e.target.value)}
-          />
-          <Button onClick={handleSubmitClick} text={"submit"} />
-        </div>
+        {loading ? (
+            <div className="loading">
+              {" "}
+              <Spinner> </Spinner>
+            </div>
+        ) : (
+            <div className="show-jobs">
+              {allJobsStatic?.map(
+                  (job, i) =>
+                      i < maxCardsPerPage && (
+                          <JobCard
+                              key={i}
+                              link={job.link}
+                              title={job.company}
+                              content={job.jobDesc}
+                              subtitle={job.jobTitle}
+                          />
+                      )
+              )}
+            </div>
+        )}
       </div>
-      {loading ? (
-        <div className="loading">
-          {" "}
-          <Spinner> </Spinner>
-        </div>
-      ) : (
-        <div className="show-jobs">
-          {allJobsStatic?.map(
-            (job, i) =>
-              i < maxCardsPerPage && (
-                <JobCard
-                  key={i}
-                  link={job.link}
-                  title={job.company}
-                  content={job.jobDesc}
-                  subtitle={job.jobTitle}
-                />
-              )
-          )}
-        </div>
-      )}
-    </div>
   );
 };
 
