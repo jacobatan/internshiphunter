@@ -1,10 +1,11 @@
 import React from "react";
 import "./index.css";
-import Button from "../../components/Button";
 import Spinner from "../../components/Spinner"
 import JobCard from '../../components/JobCard'
 import { useEffect } from "react";
 import { useState } from "react";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faU, faUser } from '@fortawesome/free-solid-svg-icons'
 
 const Jobs = () => {
 
@@ -26,9 +27,23 @@ const Jobs = () => {
   return (
     <div className="jobs">
         {/* <Button text={"hello!"} handleChange={handleChange()}/> */}  
-      <h1 className="jobs-found">
-          Here are the jobs we found for you...
-      </h1>
+      <div className="jobs-nav">
+        <h1 className="jobs-found">
+            Here are the jobs we found for you...
+        </h1>
+        <button className="profile-btn">
+          <FontAwesomeIcon icon={faUser} size="2x"/>
+        </button>
+        
+      </div>
+
+      <div id="myModal" className="modal">
+        <div className="modal-content">
+        <span className="close">&times;</span>
+        <p>Some text in the Modal..</p>
+        </div>
+      </div>
+
       {
         loading ? 
           <div className="loading">
