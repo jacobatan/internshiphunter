@@ -61,6 +61,7 @@ const Jobs = () => {
                                     <span>Aditya</span>
                                     <span>Niraj</span>
                                     <span>Ayaan</span>
+                                    <span>DK</span>
                                 </div>
                                 <div className="modal-leaderboard-section">
                                     <span><h4>Emotes</h4></span>
