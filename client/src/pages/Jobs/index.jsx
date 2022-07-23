@@ -93,8 +93,9 @@ const Jobs = () => {
     return () => clearTimeout(loader);
   };
 
-  function emoteClick() {
+  function emoteClick(gif) {
     points < 50 ? setPoints(points) : setPoints(points - 50)
+    console.log(gif)
   }
 
   return (
