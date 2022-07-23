@@ -185,8 +185,9 @@
 }
 
 .profile-img {
-    width: 10rem;
-    height: 9rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
 }
 
 /* DHRUV BHAIII */
