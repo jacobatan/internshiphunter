@@ -24,7 +24,8 @@
   background-color: white;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  border-right: black 0.2rem solid;
+  padding-right: 10px;
+  border-right: black 2px solid;
 }
 
 .left h1 {
