@@ -4,6 +4,7 @@ const Job = require("./models/Job.models");
 
 require("dotenv").config();
 require("express-async-errors");
+const cors = require("cors");
 
 // DB stuff
 const connectDB = require("./db/connect");
@@ -17,6 +18,7 @@ const app = express();
 
 // middleware
 app.use(express.json());
+app.use(cors());
 
 // routes
 app.use("/api", routers);

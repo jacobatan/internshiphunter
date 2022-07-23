@@ -7,10 +7,10 @@
   padding: 1rem;
   cursor: pointer;
   border-radius: var(--border-radius);
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0 8px 16px 0 rgb(238, 222, 209);
   position: relative;
-  margin: 0 1.5em;
+  margin: 1em 1.5em;
 }
 
 .card > * + * {
@@ -35,7 +35,7 @@
 
 .card .card__arrow {
   position: absolute;
-  background: #111;;
+  background: #111;
   padding: 0.4rem;
   border-top-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
@@ -52,9 +52,9 @@
 }
 
 /* hover */
-.card:hover{
+.card:hover {
   transform: scale(0.99);
-  filter: blur(1px);
+  /* filter: blur(1px); */
   transition: transform ease-out 0.25s;
 }
 
