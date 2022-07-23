@@ -4,12 +4,14 @@ import Spinner from "../../components/Spinner"
 import JobCard from '../../components/JobCard'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faUser} from '@fortawesome/free-solid-svg-icons'
-import salman from '/Users/dhruvkanthpuli/Documents/modal-wdcc/internshiphunter/client/src/assests/salman.jpg'
+import salman from '../../assests/salman.jpg'
+import Button from '../../components/Button'
 
 const Jobs = () => {
 
     const [loading, setLoading] = useState(true);
     const [modal, showModal] = useState(false);
+    const [showEmotes, setShowEmotes] = useState(false);
 
     function onClick() {
         showModal(!modal);
@@ -64,7 +66,7 @@ const Jobs = () => {
                                 </div>
                                 <div className="modal-leaderboard-section">
                                     <span><h4>Emotes</h4></span>
-                                    <span><button>emote</button></span>
+                                    <span><Button text="emote"></Button></span>
                                     <span><button>emote</button></span>
                                     <span><button>emote</button></span>
                                     <span><button>emote</button></span>
@@ -83,6 +85,15 @@ const Jobs = () => {
                     </div>
                 </div>
             }
+
+            {
+            showEmotes &&
+                <div className="emotes-modal">
+
+                </div>
+            }
+
+
             {/* DHRUVVVV BHAIIIII */}
 
             {
