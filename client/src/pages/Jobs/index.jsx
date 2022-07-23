@@ -14,8 +14,8 @@ const Jobs = () => {
   const [loading, setLoading] = useState(true);
   const [modal, showModal] = useState(false);
   const [showEmotes, setShowEmotes] = useState(false);
+  const [points, setPoints] = useState(999);
   const userName = "Dhruv Bhai";
-  const userScore = 999;
 
   const scores = [90, 80, 70, 60, 50];
   const names = ["Jacob", "Aditya", "Niraj", "Ayaan", "DK"];
@@ -115,7 +115,7 @@ const Jobs = () => {
               </div>
               <div className="modal-info-text">
                 <h1 className="username">Hello {userName}</h1>
-                <p className="points">Your Score : {userScore}</p>
+                <p className="points">Your Score : {points}</p>
               </div>
             </div>
             <div className="modal-leaderboard">
@@ -152,7 +152,7 @@ const Jobs = () => {
               &times;
             </span>
             <div className="modal-leaderboard">
-              <h1 className="points-score">Points : 400</h1>
+              <h1 className="points-score">Points : {points}</h1>
               <div className="modal-leaderboard-box">
                 <div className="modal-leaderboard-section">
                   <span>
@@ -163,7 +163,10 @@ const Jobs = () => {
                     />
                   </span>
                   <span>
-                    <Button text="50PP"> </Button>
+                    <Button
+                      text="50PP"
+                      onClick={() => setPoints(points - 50)}
+                    />
                   </span>
                   <span>
                     <img
@@ -173,7 +176,7 @@ const Jobs = () => {
                     />
                   </span>
                   <span>
-                    <Button text="50PP"> </Button>
+                    <Button text="50PP" />
                   </span>
                 </div>
                 <div className="modal-leaderboard-section">
@@ -185,7 +188,7 @@ const Jobs = () => {
                     />
                   </span>
                   <span>
-                    <Button text="50PP"> </Button>
+                    <Button text="50PP" />
                   </span>
                   <span>
                     <img
@@ -195,7 +198,7 @@ const Jobs = () => {
                     />
                   </span>
                   <span>
-                    <Button text="50PP"> </Button>
+                    <Button text="50PP" />
                   </span>
                 </div>
                 <div className="modal-leaderboard-section">
@@ -207,7 +210,7 @@ const Jobs = () => {
                     />
                   </span>
                   <span>
-                    <Button text="50PP"> </Button>
+                    <Button text="50PP" />
                   </span>
                   <span>
                     <img
@@ -217,7 +220,7 @@ const Jobs = () => {
                     />
                   </span>
                   <span>
-                    <Button text="50PP"> </Button>
+                    <Button text="50PP" />
                   </span>
                 </div>
               </div>
