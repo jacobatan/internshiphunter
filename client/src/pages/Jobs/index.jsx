@@ -94,7 +94,7 @@ const Jobs = () => {
   };
 
   function emoteClick() {
-    points < 0 ? setPoints(points) : setPoints(points - 50)
+    points < 50 ? setPoints(points) : setPoints(points - 50)
   }
 
   return (
