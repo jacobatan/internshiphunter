@@ -97,9 +97,9 @@ const Jobs = () => {
 
     const options = [
         {value: "all", label: "All"},
-        {value: "auckland", label: "Auckland"},
-        {value: "sydney", label: "Sydney"},
-        {value: "hongkong", label: "Hong Kong"},
+        {value: "Auckland", label: "Auckland"},
+        {value: "Sydney", label: "Sydney"},
+        {value: "Hong Kong", label: "Hong Kong"},
     ];
 
     const [selectedLocation, setSelectedLocation] = useState(null);
