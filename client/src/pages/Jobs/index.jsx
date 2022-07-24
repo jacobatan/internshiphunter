@@ -19,6 +19,10 @@ const Jobs = () => {
     const [showGif, setShowGif] = useState(false);
     const userName = "Dhruv";
 
+    function incrementPoints() {
+        setPoints(points => points+25);
+    }
+
     const scores = [90, 80, 70, 60, 50];
     const names = ["Jacob", "Aditya", "Niraj", "Ayaan", "Mukesh."];
     const gif = [
@@ -317,6 +321,7 @@ const Jobs = () => {
                         (job, i) =>
                             i < maxCardsPerPage && (
                                 <JobCard
+                                    incrementPoints={incrementPoints}
                                     key={i}
                                     link={job.link}
                                     title={job.company}

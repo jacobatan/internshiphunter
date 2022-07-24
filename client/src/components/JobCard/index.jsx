@@ -1,10 +1,12 @@
 import React, { useCallback } from "react";
 import "./index.css";
 import { useNavigate } from "react-router-dom";
+
 const JobCard = (props) => {
   function handleOnClick() {
     var win = window.open(props.link, "_blank");
     win.focus();
+    props.incrementPoints();
   }
   return (
     <div className="card" onClick={handleOnClick}>
