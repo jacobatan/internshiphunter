@@ -86,9 +86,9 @@ const Index = () => {
               className={styles.input}
             />
             {error && <div className={styles.error_msg}>{error}</div>}
-            <button type="submit" className={styles.black_btn}>
+            <a type="submit" href="https://internhunter.herokuapp.com/jobs" className={styles.black_btn}>
               Sign Up
-            </button>
+            </a>
           </form>
         </div>
       </div>

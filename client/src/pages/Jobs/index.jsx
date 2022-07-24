@@ -157,9 +157,9 @@ const Jobs = () => {
             {modal && (
                 <div id="myModal" className="modal">
                     <div className="modal-content">
-            <span onClick={onClick} className="close">
-              &times;
-            </span>
+                        <span onClick={onClick} className="close">
+                            &times;
+                        </span>
                         <div className="modal-info">
                             <div>
                                 <img src={salman} className="profile-img" alt="salman khan"/>
@@ -173,21 +173,15 @@ const Jobs = () => {
                             <h2 className="leaderboard">Your Friends</h2>
                             <div className="modal-leaderboard-box">
                                 <div className="modal-leaderboard-section">
-                  <span>
-                    <h4 className="heading">Name</h4>
-                  </span>
+                                    <span><h4 className="heading">Name</h4></span>
                                     {showNames}
                                 </div>
                                 <div className="modal-leaderboard-section">
-                  <span>
-                    <h4 className="heading">Emotes</h4>
-                  </span>
+                                    <span><h4 className="heading">Emotes</h4></span>
                                     {showEmoteBtns}
                                 </div>
                                 <div className="modal-leaderboard-section">
-                  <span>
-                    <h4 className="heading">Score</h4>
-                  </span>
+                                    <span><h4 className="heading">Score</h4></span>
                                     {showScores}
                                 </div>
                             </div>
