@@ -98,9 +98,10 @@ const Jobs = () => {
     return () => clearTimeout(loader);
   };
 
-  function emoteClick(gif) {
+  function emoteClick(e) {
     points < 50 ? setPoints(points) : setPoints(points - 50)
-    console.log(gif)
+    console.log(gif[e.currentTarget.id])
+
   }
 
   return (
@@ -175,7 +176,8 @@ const Jobs = () => {
                       <span>
                     <Button
                         text="50PP"
-                        onClick={emoteClick}
+                        id={0}
+                        onClick={(e) => emoteClick(e)}
                     />
                   </span>
                       <span>
@@ -187,7 +189,8 @@ const Jobs = () => {
                   </span>
                       <span>
                     <Button text="50PP"
-                            onClick={emoteClick}
+                            id={1}
+                            onClick={(e) => emoteClick(e)}
                     />
                   </span>
                     </div>
@@ -201,7 +204,8 @@ const Jobs = () => {
                   </span>
                       <span>
                     <Button text="50PP"
-                            onClick={emoteClick}
+                            id={2}
+                            onClick={(e) => emoteClick(e)}
                     />
                   </span>
                       <span>
@@ -213,7 +217,8 @@ const Jobs = () => {
                   </span>
                       <span>
                     <Button text="50PP"
-                            onClick={emoteClick}
+                            id={3}
+                            onClick={(e) => emoteClick(e)}
                     />
                   </span>
                     </div>
@@ -227,7 +232,8 @@ const Jobs = () => {
                   </span>
                       <span>
                     <Button text="50PP"
-                            onClick={emoteClick}
+                            id={4}
+                            onClick={(e) => emoteClick(e)}
                     />
                   </span>
                       <span>
@@ -239,7 +245,8 @@ const Jobs = () => {
                   </span>
                       <span>
                     <Button text="50PP"
-                            onClick={emoteClick}
+                            id={5}
+                            onClick={(e) => emoteClick(e)}
                     />
                   </span>
                     </div>
