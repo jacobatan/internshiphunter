@@ -18,7 +18,7 @@ const Jobs = () => {
   const userName = "Dhruv";
 
   const scores = [90, 80, 70, 60, 50];
-  const names = ["Jacob", "Aditya", "Niraj", "Ayaan", "Mukesh"];
+  const names = ["Jacob", "Aditya", "Niraj", "Ayaan", "Mukesh."];
   const gif = [
     "https://c.tenor.com/bmFPh10gQtQAAAAC/salman-khan.gif", "https://c.tenor.com/WxxgkUaLvCsAAAAC/ghanta-salman.gif",
     "https://c.tenor.com/w2mCAR7kgUsAAAAC/clash-royale-emotes.gif", "https://c.tenor.com/YvwNrCfhvOIAAAAC/susu-varudhu-raghava-lawrence.gif",
