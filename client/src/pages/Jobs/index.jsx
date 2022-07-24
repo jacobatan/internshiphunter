@@ -4,7 +4,7 @@ import Spinner from "../../components/Spinner";
 import JobCard from "../../components/JobCard";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-solid-svg-icons";
-import salman from "../../assests/salman.jpg";
+import dhruv from "../../assests/dhruv.jpg";
 import Button from "../../components/Button";
 import {getAllJobs, getGif, getJob} from "./api.js";
 import Select from "react-select";
@@ -75,7 +75,7 @@ const Jobs = () => {
         setShowGif(false);
     }
 
-    function onGifTeriMaa() {
+    function onGifOpen() {
         setTheGifURL("")
     }
 
@@ -151,7 +151,7 @@ const Jobs = () => {
                 <div className="modal">
                     <div className="modal-content">
                         <img src={theGifURL} alt="hello"/>
-                        <span onClick={onGifTeriMaa} className="close">
+                        <span onClick={onGifOpen} className="close">
                           &times;
                         </span>
                     </div>
@@ -166,7 +166,7 @@ const Jobs = () => {
                         </span>
                         <div className="modal-info">
                             <div>
-                                <img src={salman} className="profile-img" alt="salman khan"/>
+                                <img src={dhruv} className="profile-img" alt="salman khan"/>
                             </div>
                             <div className="modal-info-text">
                                 <h1 className="username">Hello {userName}</h1>
