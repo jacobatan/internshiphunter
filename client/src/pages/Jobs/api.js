@@ -23,3 +23,13 @@ export async function getJob(location, field) {
     console.log(error);
   }
 }
+
+export async function getGif() {
+  const URL = "https://internship-hunter.herokuapp.com/api/gifs";
+  try {
+    const response = await Axios.get(URL);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+}

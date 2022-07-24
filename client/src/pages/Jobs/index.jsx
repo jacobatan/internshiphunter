@@ -6,7 +6,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-solid-svg-icons";
 import salman from "../../assests/salman.jpg";
 import Button from "../../components/Button";
-import {getAllJobs, getJob} from "./api.js";
+import {getAllJobs, getGif, getJob} from "./api.js";
 import Select from "react-select";
 import Input from "./components/Input";
 import axios from "axios";
@@ -16,6 +16,7 @@ const Jobs = () => {
     const [modal, showModal] = useState(false);
     const [showEmotes, setShowEmotes] = useState(false);
     const [points, setPoints] = useState(100);
+    const [showGif, setShowGif] = useState(false);
     const userName = "Dhruv";
 
     const scores = [90, 80, 70, 60, 50];
@@ -51,8 +52,27 @@ const Jobs = () => {
         );
     });
 
+    const [theGifURL, setTheGifURL] = useState("")
+
+    async function onProfileClick() {
+        console.log("pain")
+        try {
+            const data = await getGif();
+            setTheGifURL(data[0].gifURL);
+            setShowGif(true);
+        } catch (e) {
+            console.log(e)
+        }
+        showModal(true);
+    }
+
     function onClick() {
-        showModal(!modal);
+        showModal(false);
+        setShowGif(false);
+    }
+
+    function onGifTeriMaa() {
+        setTheGifURL("")
     }
 
     const emotesOnClick = (event) => {
@@ -118,11 +138,22 @@ const Jobs = () => {
             {/* <Button text={"hello!"} handleChange={handleChange()}/> */}
             <div className="jobs-nav">
                 <h1 className="jobs-found">Here are the jobs we found for you...</h1>
-                <button className="profile-btn" onClick={onClick}>
+                <button className="profile-btn" onClick={onProfileClick}>
                     <FontAwesomeIcon icon={faUser} size="2x"/>
                 </button>
             </div>
             {/* DHRUVVVV BHAIIIII */}
+            {theGifURL !== "" &&
+                <div className="modal">
+                    <div className="modal-content">
+                        <img src={theGifURL} alt="hello"/>
+                        <span onClick={onGifTeriMaa} className="close">
+                          &times;
+                        </span>
+                    </div>
+                </div>
+            }
+
             {modal && (
                 <div id="myModal" className="modal">
                     <div className="modal-content">
