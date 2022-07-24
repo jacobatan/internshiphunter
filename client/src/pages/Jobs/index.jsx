@@ -311,7 +311,9 @@ const Jobs = () => {
                     {/*     value={selectedOption} */}
                     {/*     onChange={(e) => setSelectedOption(e.target.value)} */}
                     {/* /> */}
+                    <div className="temporary-pain">
                     <Button onClick={handleSubmitClick} text={"submit"}/>
+                    </div>
                 </div>
             </div>
             {loading ? (
