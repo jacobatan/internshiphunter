@@ -27,7 +27,7 @@ const port = process.env.PORT || 3000;
 
 // ayaan moment
 const axios = require("axios");
-const ayaan = require("./ayaan.json");
+const ayaan = require("./info.json");
 const hackyPost = async (ayaanPayload) => {
   try {
     const res = await axios.post(
