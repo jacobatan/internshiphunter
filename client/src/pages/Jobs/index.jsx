@@ -307,10 +307,10 @@ const Jobs = () => {
                         onChange={setSelectedLocation}
                         options={options}
                     />
-                    <Input
-                        value={selectedOption}
-                        onChange={(e) => setSelectedOption(e.target.value)}
-                    />
+                    {/* <Input */}
+                    {/*     value={selectedOption} */}
+                    {/*     onChange={(e) => setSelectedOption(e.target.value)} */}
+                    {/* /> */}
                     <Button onClick={handleSubmitClick} text={"submit"}/>
                 </div>
             </div>
