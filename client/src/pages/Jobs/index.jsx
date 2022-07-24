@@ -4,7 +4,7 @@ import Spinner from "../../components/Spinner";
 import JobCard from "../../components/JobCard";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-solid-svg-icons";
-import dhruv from "../../assests/jacob.jpg";
+import dhruv from "../../assests/dhruv.jpg";
 import Button from "../../components/Button";
 import {getAllJobs, getGif, getJob} from "./api.js";
 import Select from "react-select";
@@ -17,14 +17,14 @@ const Jobs = () => {
     const [showEmotes, setShowEmotes] = useState(false);
     const [points, setPoints] = useState(100);
     const [showGif, setShowGif] = useState(false);
-    const userName = "Jacob";
+    const userName = "Dhruv";
 
     function incrementPoints() {
         setPoints(points => points+25);
     }
 
     const scores = [90, 80, 70, 60, 50];
-    const names = ["Dhruv", "Aditya", "Niraj", "Ayaan", "Mukesh."];
+    const names = ["Jacob", "Aditya", "Niraj", "Ayaan", "Mukesh."];
     const gif = [
         "https://c.tenor.com/bmFPh10gQtQAAAAC/salman-khan.gif", "https://c.tenor.com/WxxgkUaLvCsAAAAC/ghanta-salman.gif",
         "https://c.tenor.com/w2mCAR7kgUsAAAAC/clash-royale-emotes.gif", "https://c.tenor.com/YvwNrCfhvOIAAAAC/susu-varudhu-raghava-lawrence.gif",
